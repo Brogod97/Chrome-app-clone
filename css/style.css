@@ -1,3 +1,138 @@
 .hidden {
   display: none;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1);
+  z-index: 2;
+}
+
+#clock {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 90px;
+  color: whitesmoke;
+}
+
+#greeting {
+  margin: 30px 0px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+#todo-form {
+  margin: 30px 0px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+#todo-form input {
+  text-align: center;
+  width: 250px;
+  font-size: 1rem;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  background-color: transparent;
+}
+#todo-form input::placeholder {
+  color: whitesmoke;
+}
+#todo-form input:focus {
+  outline: none;
+}
+#todo-form input:focus::placeholder {
+  opacity: 0;
+}
+
+#todo-list {
+  margin: 30px 0px;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 1rem;
+  color: whitesmoke;
+  list-style: none;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  padding: 2px;
+}
+
+#todo-list li button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+#quote {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 1rem;
+  color: whitesmoke;
+  opacity: 80%;
+}
+
+#weather {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  z-index: 2;
+  text-align: center;
+  font-size: 1rem;
+  color: whitesmoke;
+}
